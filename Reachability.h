@@ -52,6 +52,7 @@ typedef NS_ENUM(NSInteger, NetworkStatus) {
     ReachableViaWWAN = 1
 };
 
+// Class renamed to LDBReachability to prevent private API conflict with Apple's Reachability class
 @class Reachability;
 
 typedef void (^NetworkReachable)(Reachability * reachability);
