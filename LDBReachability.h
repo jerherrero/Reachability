@@ -53,14 +53,14 @@ typedef NS_ENUM(NSInteger, NetworkStatus) {
 };
 
 // Class renamed to LDBReachability to prevent private API conflict with Apple's Reachability class
-@class Reachability;
+@class LDBReachability;
 
-typedef void (^NetworkReachable)(Reachability * reachability);
-typedef void (^NetworkUnreachable)(Reachability * reachability);
-typedef void (^NetworkReachability)(Reachability * reachability, SCNetworkConnectionFlags flags);
+typedef void (^NetworkReachable)(LDBReachability * reachability);
+typedef void (^NetworkUnreachable)(LDBReachability * reachability);
+typedef void (^NetworkReachability)(LDBReachability * reachability, SCNetworkConnectionFlags flags);
 
 
-@interface Reachability : NSObject
+@interface LDBReachability : NSObject
 
 @property (nonatomic, copy) NetworkReachable    reachableBlock;
 @property (nonatomic, copy) NetworkUnreachable  unreachableBlock;
